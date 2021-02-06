@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Image from './Image.js'
+import { Button } from '@material-ui/core';
 
 export default function ImagesField({images, addRequest}){
     const [page, setPage] = useState(2);
@@ -22,7 +23,7 @@ export default function ImagesField({images, addRequest}){
                 })
                 }
             </ul>
-            <button onClick={changePage}>Load more</button>
+            <Button variant="contained" color="primary" onClick={changePage}>Load more</Button>{/*<button onClick={changePage}>Load more</button> */}
         </div>
     );
 }

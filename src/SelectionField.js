@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Button } from '@material-ui/core';
 
 
 export default function SelectionField({request}){
@@ -16,14 +17,15 @@ export default function SelectionField({request}){
     }
     
     return(
-        <form onSubmit={submitHandler}>
-            Choose Rover:
+        <form >
+            <div className='selectionLine'>
+            <span>Choose Rover: </span>
             <select size='1' onChange={event=>setRover(event.target.value)}>
                 <option  value='curiosity'>Curiosity</option>
                 <option  value='opportunity'>Opportunity</option>
                 <option  value='spirit'>Spirit</option>
             </select>
-            Choose Camera:
+            <span>  Choose Camera: </span>
             <select size='1' onChange={event=>setCamera(event.target.value)}>
                 <option value='fhaz'>FHAZ</option>
                 <option value='rhaz'>RHAZ</option>
@@ -35,9 +37,14 @@ export default function SelectionField({request}){
                 <option value='pancam'>PANCAM</option>
                 <option value='minites'>MINITIES</option>
             </select>
-            Enter Sol (from 0 to 1000):
-            <input value={sol} onChange={event => setSol(event.target.value)}/>
-            <div><button>Show images</button></div>
+            <span> Enter Sol (from 0 to 1000): </span>
+            <input className="solInputField"value={sol} onChange={event => setSol(event.target.value)}/>
+            </div>
+            <div className='explanation'>
+                (For Curiosity available cameras FHAZ, RHAZ, MAST, CHEMKAM, MAHLI, MARDI, NAVCAM.<br/>
+                For Opportunity and Spirit available cameras FHAZ, RHAZ, NAVCAM, PANCAM, MINITIES.)
+            </div>
+            <div className='showImagesButton'><Button variant="contained" color="primary" onClick={submitHandler}>Show images</Button></div>
         </form>
 
     );

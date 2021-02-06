@@ -10,13 +10,13 @@ function App() {
   const [sol, setSol] = useState('0');
   const [page, setPage] = useState(2);
   
-  function setNewRequest(newRover, newSol, newCamera){
+  async function setNewRequest(newRover, newSol, newCamera){
     setPage(2)
     setRover(newRover);
     setCamera(newCamera);
     setSol(newSol);
-
-    fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/`+rover+`/photos?sol=`+sol+`&camera=`+camera+`&page=1&api_key=FRePKQVJD6HQcb30f5gP6S7uvn7q2mh2Bctjl6FX`)
+    let url = `https://api.nasa.gov/mars-photos/api/v1/rovers/`+newRover+`/photos?sol=`+newSol+`&camera=`+newCamera+`&page=1&api_key=FRePKQVJD6HQcb30f5gP6S7uvn7q2mh2Bctjl6FX`;
+    fetch(url)
     .then(res=>res.json())
     .then(result=>{
       setImages(result.photos)
@@ -27,7 +27,6 @@ function App() {
 
   function addPage(){
     setPage(page+1)
-    console.log(`https://api.nasa.gov/mars-photos/api/v1/rovers/`+rover+`/photos?sol=`+sol+`&camera=`+camera+`&page=`+page+`&api_key=FRePKQVJD6HQcb30f5gP6S7uvn7q2mh2Bctjl6FX`)
 
     fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/`+rover+`/photos?sol=`+sol+`&camera=`+camera+`&page=`+page+`&api_key=FRePKQVJD6HQcb30f5gP6S7uvn7q2mh2Bctjl6FX`)
     .then(res=>res.json())
@@ -45,7 +44,7 @@ function App() {
         />
       </div>
 
-      <div>Images that we find:</div>
+      <div className='imagesTitle'>Images that we found:</div>
 
       <div className='imagesFields'>
         <ImagesField 
