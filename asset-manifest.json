@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/images-from-rover-deployed/static/css/main.83a69f5f.chunk.css",
+    "main.js": "/images-from-rover-deployed/static/js/main.5d443792.chunk.js",
+    "main.js.map": "/images-from-rover-deployed/static/js/main.5d443792.chunk.js.map",
+    "runtime-main.js": "/images-from-rover-deployed/static/js/runtime-main.eba1b6fd.js",
+    "runtime-main.js.map": "/images-from-rover-deployed/static/js/runtime-main.eba1b6fd.js.map",
+    "static/js/2.d1200937.chunk.js": "/images-from-rover-deployed/static/js/2.d1200937.chunk.js",
+    "static/js/2.d1200937.chunk.js.map": "/images-from-rover-deployed/static/js/2.d1200937.chunk.js.map",
+    "static/js/3.d4794903.chunk.js": "/images-from-rover-deployed/static/js/3.d4794903.chunk.js",
+    "static/js/3.d4794903.chunk.js.map": "/images-from-rover-deployed/static/js/3.d4794903.chunk.js.map",
+    "index.html": "/images-from-rover-deployed/index.html",
+    "static/css/main.83a69f5f.chunk.css.map": "/images-from-rover-deployed/static/css/main.83a69f5f.chunk.css.map",
+    "static/js/2.d1200937.chunk.js.LICENSE.txt": "/images-from-rover-deployed/static/js/2.d1200937.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/images-from-rover-deployed/static/media/background.3ae1c3d0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eba1b6fd.js",
+    "static/js/2.d1200937.chunk.js",
+    "static/css/main.83a69f5f.chunk.css",
+    "static/js/main.5d443792.chunk.js"
+  ]
+}
